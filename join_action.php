@@ -7,10 +7,12 @@
 
     $date = date('Y-m-d H:i:s');
 
+    //입력받은 데이터를 DB에 저장
     $query = "insert into member (id, pw, email, date, permite) values ('$id', '$pw', '$email', '$date', 0)";
 
     $result = $connect->query($query);
 
+    //저장이 됐다면 (result = ture) 가입 완료
     if ($result) {
         ?>                    
         <script>
