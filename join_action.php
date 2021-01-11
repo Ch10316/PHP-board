@@ -1,9 +1,9 @@
 <?php
     $connect = mysqli_connect("localhost", "root", "", "board") or die ("fail");
 
-    $id=$_GET[id];
-    $pw= $_GET[pw];
-    $email = $_GET[email];
+    $id=$_GET['id'];
+    $pw= $_GET['pw'];
+    $email = $_GET['email'];
 
     $date = date('Y-m-d H:i:s');
 
@@ -27,6 +27,6 @@
 <?php
 
    }
-   
+
     mysqli_close($connect);
 ?>

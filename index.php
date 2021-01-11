@@ -3,9 +3,19 @@
     <title>Document</title>
 </head>
 <style>
-    table{
-        border-top: 1px soild #444;
-    }
+    table{border-top: 1px soild #444; border-collapse: collapse;}
+
+    tr{border-bottom: 1px soild #444; padding: 10px;}
+    
+    td{border-bottom: 1px soild #efefef; padding: 10px;}
+    
+    table.even{background: #efefef;}
+    
+    .text{text-align: center; padding-top: 20px; color: #000;}
+    .text:hover{text-decoration: underline;}
+
+    a:link{color: #57A0EE; text-decoration: none;}
+    a:hover{text-decoration: underline;}
 </style>
 <body>
     <?php
