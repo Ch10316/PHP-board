@@ -2,14 +2,16 @@
     session_start();
 
     $connect = mysqli_connect('localhost', 'root', '', 'board') or die ("Fail");
-    $query = "select * from where id = ";
-    $result = $connect->query($query);
 
     //Id와 Pw 입력받기
     $id = $_GET['id'];
     $pw = $_GET['pw'];
 
     //아이디 존재 여부 검사
+    $query = "select * from where id = '$id'";
+    $result = $connect->query($query);
+
+    //아이디가 있다면 비밀번호 검사
     if (mysqli_num_rows($result)==1) {
         $row=mysqli_fetch_assoc($result);
 
@@ -25,7 +27,7 @@
 <?php
             }
             else{
-                echo "session fail";
+                echo "Session fail";
             }
         }    
         else{
