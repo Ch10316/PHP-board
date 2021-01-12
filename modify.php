@@ -1,7 +1,7 @@
 <?php
     $connect = mysqli_connect("localhost", "root", "", "board");
     $id = $_GET['id'];
-    $number = $_GET['nubmer'];
+    $number = $_GET['number'];
     $query = "select title, content, date, id from board where number = $number";
     $result = $connect->query($query);
     $rows = mysqli_fetch_assoc($result);
@@ -20,7 +20,7 @@
         </script>
 <?php    
     }
-    else if($_SESSION['userid']==$usrid) {
+    else if($_SESSION['userid']==$userid) {
 ?>
         <form method = "get" action = "modify_action.php">
         <table  style="padding-top:50px" align = center width=700 border=0 cellpadding=2 >
