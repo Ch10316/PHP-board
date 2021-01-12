@@ -55,9 +55,9 @@
                 while($rows = mysqli_fetch_assoc($result)){ //DB에 저장된 데이터 수 (열 기준)
                     if($total%2==0){
             ?>          <tr class = "even"></tr>
-                <?php }
+        <?php   }
                 else{
-                ?>   <tr>
+        ?>  <tr>
             <?php   } ?>
             <td width = "50" align="center"><?php echo $total?></td>
             <td width = "500" align="center"><a href=""view.php?number=<?php echo $rows['number']?>">
